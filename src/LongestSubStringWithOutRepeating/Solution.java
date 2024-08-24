@@ -51,4 +51,26 @@ public class Solution {
         return result;
     }
 
+
+
+    private  static  int optimal(String s ){
+        int result =0;
+        int n = s.length();
+        HashMap<Character,Integer> map = new HashMap<>();
+        int pointer =0;
+        for(int i=0;i<n;i++){
+            char c = s.charAt(i);
+            if(!map.containsKey(c) || map.get(c)<pointer){
+                map.put(c,i);
+                result =  Math.max(result,i-pointer+1);
+            }else{
+                pointer = map.get(c)+1;
+            }
+        }
+        return result;
+    }
+
+
+
+
 }
