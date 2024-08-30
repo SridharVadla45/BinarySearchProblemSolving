@@ -2,7 +2,7 @@ package MaxConsecutiveOnesIII;
 
 public class Solution {
     public int longestOnes(int[] nums, int k) {
-          return  brute(nums,k);
+          return  better(nums,k);
     }
 
 
